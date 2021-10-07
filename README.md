@@ -22,13 +22,13 @@ Descompacte e entre na pasta do projeto
 > Essa opção requer o git instalado em sua maquina https://git-scm.com/
 
 
- 2 - Apos estar no diretorio do projeto realize os seguintes comando:
+ 2 - Apos estar no diretorio do projeto realize os seguintes comandos:
 
     $ python -m venv .venv
     $ source .venv/bin/activate
     $ docker-compose up -d
     $ docker-compose exec web python manage.py migrate
-> esta configuração necessita de ter docker instalado em sua maquina, caso necessario, consulte https://www.docker.com/
+> para esta configuração é necessário que você tenha docker instalado em sua maquina, caso necessario, consulte https://www.docker.com/
 
 ### Endpoints
 
@@ -46,7 +46,7 @@ Descompacte e entre na pasta do projeto
 
 #### Ultilizando a API via Curl e  HTTP
 
->obs: Antes de proceseguir com os passos é necessario a criação de usuario admin que possa ser feito atraves do comando:
+>obs: Antes de prosseguir com os passos é necessario a criação de usuario admin que possa ser feito atraves do comando:
 
     $ docker-compose exec web python manage.py createsuperuser
 
