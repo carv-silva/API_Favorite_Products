@@ -4,13 +4,12 @@ from .models import Favorite, Customer
 class FavoriteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Favorite
-        fields = '__all__'# ('id', 'name', 'email')
-
+        fields = '__all__'
 
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
-        fields = '__all__' # ('id', 'customer', 'product_id')
+        fields = '__all__'
 
 class FavoriteProductsSerializer(serializers.Serializer):
     id = serializers.UUIDField()
