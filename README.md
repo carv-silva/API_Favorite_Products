@@ -1,13 +1,13 @@
 # API_Favorite_Products
 Esta documentação descreve a estrutura da API de produtos para desafios técnicos.
 
-##Tecnologias utilizadas
+## Tecnologias utilizadas
 
 1 - **Python**
 2 - **Django**
 3 - **Django Rest Framework**
 4 - **Postgresql**
-5 - **Doker**
+5 - **Docker**
 
 
 ### Deploy
@@ -86,7 +86,7 @@ Descompacte e entre na pasta do projeto
 
 * **Inserindo Cliente(POST)**
 
-    $ curl -i -H "Content-Type: application/json" -H "Authorization: Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNjQyNzU3LCJqdGkiOiI3OTIwNWZiODQwZDA0OWE2YTJkN2I2NzU1Njg2MDFjMiIsInVzZXJfaWQiOjF9.ZgqmN8UZoDXyzK5rTGegF9fiVaxRnI34nnl8mamWrfM" -X POST -d '{ "name": "Post Cliente Teste", "email": "postteste@gmail.com"}' http://127.0.0.1:8000/customers/
+    $ curl -i -H "Content-Type: application/json" -H "Authorization: Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNjUzOTYxLCJqdGkiOiI4OTI2NmE4OWE4NzA0MTRiYjRiMDQwYTdmYjRmZGRjYyIsInVzZXJfaWQiOjF9.T-ctZPMrJ-qLIt_F6g6_sZT4Q0V254btgXZzONDXGkI" -X POST -d '{ "name": "Post Cliente Teste", "email": "postteste@gmail.com"}' http://127.0.0.1:8000/customers/
 
     <h5>Output:</h5>
 
