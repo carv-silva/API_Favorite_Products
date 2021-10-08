@@ -3,11 +3,12 @@ Esta documentação descreve a estrutura da API de produtos para desafios técni
 
 ## Tecnologias utilizadas
 
-1 - **Python**
-2 - **Django**
-3 - **Django Rest Framework**
-4 - **Postgresql**
-5 - **Docker**
+* 1 - **Python**
+* 2 - **Django**
+* 3 - **Django Rest Framework**
+* 4 - **Postgresql**
+* 5 -  **JWT**
+* 6 - **Docker**
 
 
 ### Deploy
