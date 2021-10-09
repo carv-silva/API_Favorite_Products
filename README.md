@@ -244,7 +244,7 @@ Descompacte e entre na pasta do projeto
 
 
 ### Testes
->Para realizar os teste da API favor rodar o seguinte comando dentro da pasta do projeto:
+>Para realizar os teste da API, rodar o comando dentro da pasta do projeto:
     $ docker-compose exec web python manage.py test
 
 * **APITestCase**
