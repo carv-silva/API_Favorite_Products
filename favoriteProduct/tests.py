@@ -5,18 +5,24 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from .models import Customer, Favorite
 
-'''OBS: caso queria realizar o test, voltar as configuracoes do banco sqlite no src/settings.py que estao comentadas '''
+'''OBS: caso queria realizar o test, favor rodar o seguinte comando:
+
+        $ docker-compose exec web python manage.py test'''
+
 
 class CustomerTests(APITestCase):
-   def setUp(self):
-      User.objects.create_superuser('root', '	root@gmail.com', 'root')
-      self.customer = Customer.objects.create(
-         name='cliente Teste do Case', email='clienteteste@gmail.com')
-      url = reverse('token_obtain_pair')
-      data = {"username": "root", "password": "root"}
-      response = self.client.post(url, data, format='json')
-      self.token = response.data['access']
-      self.client.credentials(HTTP_AUTHORIZATION='Bearer' + self.token)
+
+    def setUp(self):
+
+        User.objects.create_superuser('root', 'root@gmail.com', 'root')
+        self.customer = Customer.objects.create(
+            name='cliente Teste do Case', email='clienteteste@gmail.com')
+
+        url = reverse('token_obtain_pair')
+        data = {"username": "root", "password": "root"}
+        response = self.client.post(url, data, format='json')
+        self.token = response.data['access']
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.token)
 
     def test_token_invalid_credentials(self):
         url = reverse('token_obtain_pair')
@@ -26,8 +32,8 @@ class CustomerTests(APITestCase):
 
     def test_customer_create(self):
         url = reverse('customers-list')
-        data = {"name": "cliente Teste do Case02",
-                "email": "teste02@gmail.com"}
+        data = {"name": "cliente Teste do Case",
+                "email": "testepost@gmail.com"}
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
