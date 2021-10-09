@@ -240,8 +240,33 @@ Descompacte e entre na pasta do projeto
     Content-Length: 0
     X-Content-Type-Options: nosniff
     Referrer-Policy: same-origin
+    ```
+
+
+### Testes
+>Para realizar os teste da API favor rodar o seguinte comando dentro da pasta do projeto:
+    $ docker-compose exec web python manage.py test
+
+* **APITestCase**
+
+    <h5>Output:</h5>
 
     ```
+    Creating test database for alias 'default'...
+    System check identified no issues (0 silenced).
+    ................
+    ----------------------------------------------------------------------
+    Ran 16 tests in 5.849s
+
+    OK
+    Destroying test database for alias 'default'...
+    ```
+
+
+
+
+
+
 
 
 
